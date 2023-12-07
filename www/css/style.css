@@ -22,9 +22,9 @@ input {
 }
 
 .btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 16pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15pt;
   height: 4ex;
   width: 5em;
   border-radius: 10px;

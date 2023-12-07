@@ -67,6 +67,7 @@
                 })
         }
 
+
         function sortAtkdes(){
             let TestDataClass = ncmb.DataStore(db);
             TestDataClass.order("attack", false).fetchAll()
@@ -74,6 +75,24 @@
                     showResults(results);
                 })
         }
+
+        function sortDefas(){
+            let TestDataClass = ncmb.DataStore(db);
+            TestDataClass.order("defence", true).fetchAll()
+                .then(function(results) {
+                    showResults(results);
+                })
+        }
+
+        function sortDefdes(){
+            let TestDataClass = ncmb.DataStore(db);
+            TestDataClass.order("defence", false).fetchAll()
+                .then(function(results) {
+                    showResults(results);
+                })
+        }
+
+        
 
         function showResults(results) {
             // テーブルのヘッダを生成
@@ -112,8 +131,11 @@
         <button class="btn" onclick="searchLevel()">Level</button>
         <button class="btn" onclick="searchLevelGT()">Level &gt</button>
         <br>
-        <button class="btn" onclick="sortAtkas()">ATK↑</button>
-        <button class="btn" onclick="sortAtkdes()">ATK↓</button>
+        <button class="btn" onclick="sortAtkas()">Atk↑</button>
+        <button class="btn" onclick="sortAtkdes()">Atk↓</button>
+        <br>
+        <button class="btn" onclick="sortDefas()">Def↑</button>
+        <button class="btn" onclick="sortDefdes()">Def↓</button>
     </div>
     <div id="message">message area</div>
 </body>
